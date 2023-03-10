@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="flex justify-center items-center">
+    <main
+      class="flex flex-col md:grid md:grid-cols-2 overflow-hidden shadow-xl"
+    >
+      <div
+        id="result"
+        class="text-center py-10 px-16 flex flex-col justify-center items-center gap-5"
+      >
+        <p class="result-text font-semibold">Your Result</p>
+        <div
+          class="score-circle flex flex-col justify-center items-center mt-6"
+        >
+          <p class="font-bold text-white text-6xl" id="score-val">--</p>
+          <span>of 100</span>
+        </div>
+        <p class="text-3xl text-white font-semibold">Great</p>
+        <p class="score-subtext">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div id="summary" class="flex flex-col justify-center p-10">
+        <p class="text-xl font-bold mb-6">Summary</p>
+        <div id="summaryList">
+          <!-- DATA LOADED FROM JSON -->
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+          <div class="skeleton"></div>
+        </div>
+        <button class="rounded-full mt-8">Continue</button>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.linkedin.com/in/udochukwu-amaefule-984874203/"
+        >Udochukwu Amaefule</a
+      >.
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

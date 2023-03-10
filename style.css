@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--Pale-blue);
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+main {
+  max-width: 730px;
+  min-height: 510px;
+  background-color: white;
+  border-radius: 2rem;
+}
+
+#result {
+  background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.score-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+}
+
+.score-circle span {
+  color: var(--Light-lavender);
+}
+
+.score-subtext {
+  color: var(--Light-lavender);
+}
+
+.result-text {
+  color: var(--Light-lavender);
+  font-size: 1.375rem;
+}
+
+#summary > p {
+  color: var(--Dark-gray-blue);
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.875rem;
+  border-radius: 0.5rem;
+}
+
+.summary-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.summary-item > div > * {
+  display: inline-block;
+}
+
+.summary-item > div > p {
+  margin-left: 0.25rem;
+  font-weight: 600;
+}
+
+.reaction {
+  background: hsla(0, 100%, 67%, 0.1);
+}
+
+.reaction p {
+  color: var(--Light-red);
+}
+
+.memory {
+  background: hsla(39, 100%, 56%, 0.1);
+}
+
+.memory p {
+  color: var(--Orangey-yellow);
+}
+
+.verbal {
+  background: hsla(166, 100%, 37%, 0.1);
+}
+
+.verbal p {
+  color: var(--Green-teal);
+}
+
+.visual {
+  background: hsla(234, 85%, 45%, 0.1);
+}
+
+.visual p {
+  color: var(--Cobalt-blue);
+}
+
+button {
+  padding: 1rem;
+  background: var(--Dark-gray-blue);
+  color: white;
+  transition: all 300ms;
+}
+
+button:hover {
+  background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
+.skeleton {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+  background-size: 200%;
+  animation: skeleton 1s infinite linear;
+}
+
+.skeleton:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+  main {
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  #result {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+  }
+
+  .attribution {
+    display: none;
+  }
+}
